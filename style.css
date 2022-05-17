@@ -1,0 +1,236 @@
+/* GENERAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  height: 100vh;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.input {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(223, 30, 190, 0.2);
+}
+
+/* / GENERAL */
+
+/* SLIDER */
+
+.slider-main {
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slide-wrapper {
+  width: 400%;
+  margin: 30px auto;
+  display: flex;
+  transition: all 1s ease;
+}
+
+.slide {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-content: center;
+  background-color: rgba(22, 19, 19, 0.8);
+}
+
+.slide-img {
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.subslide-wrapper {
+  display: flex;
+}
+
+.text-wrapper {
+  width: 80%;
+  overflow: hidden;
+}
+
+.text-cont {
+  width: 400%;
+  display: flex;
+  transition: all 1s ease;
+}
+
+.meme-text {
+  width: 90vw;
+  margin: 0px 5vw auto auto;
+  padding-left: 10px;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.pagination {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.circle-button {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 15px;
+  background-color: #aa77fb;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .subslide-wrapper > .pagination > label > #slide-button-1,
+#slide2:checked ~ .subslide-wrapper > .pagination > label > #slide-button-2,
+#slide3:checked ~ .subslide-wrapper > .pagination > label > #slide-button-3,
+#slide4:checked ~ .subslide-wrapper > .pagination > label > #slide-button-4 {
+  border: 3px solid rgb(14, 13, 13);
+  background: rgb(250, 250, 250);
+}
+
+#slide1:checked ~ .subslide-wrapper label:hover > #slide-button-1,
+#slide2:checked ~ .subslide-wrapper label:hover > #slide-button-2,
+#slide3:checked ~ .subslide-wrapper label:hover > #slide-button-3,
+#slide4:checked ~ .subslide-wrapper label:hover > #slide-button-4 {
+  border: 3px solid #00fbdaaa;
+}
+
+#slide1:checked ~ .subslide-wrapper label:active > #slide-button-1,
+#slide2:checked ~ .subslide-wrapper label:active > #slide-button-2,
+#slide3:checked ~ .subslide-wrapper label:active > #slide-button-3,
+#slide4:checked ~ .subslide-wrapper label:active > #slide-button-4 {
+  border: 3px solid #00fbdaaa;
+  background-color: #ffff3399;
+}
+
+#slide1:checked ~ .slide-wrapper,
+#slide1:checked ~ .subslide-wrapper > .text-wrapper > .text-cont {
+  margin-left: 0%;
+}
+#slide2:checked ~ .slide-wrapper,
+#slide2:checked ~ .subslide-wrapper > .text-wrapper > .text-cont {
+  margin-left: -100%;
+}
+#slide3:checked ~ .slide-wrapper,
+#slide3:checked ~ .subslide-wrapper > .text-wrapper > .text-cont {
+  margin-left: -200%;
+}
+#slide4:checked ~ .slide-wrapper,
+#slide4:checked ~ .subslide-wrapper > .text-wrapper > .text-cont {
+  margin-left: -300%;
+}
+
+.pagination > label:hover > .circle-button,
+.pagination > label > .circle-button:hover,
+.pagination > label > .circle-button:focus {
+  background-color: #aa77fb;
+  border: 3px solid #fff;
+}
+
+.pagination > label:active > .circle-button,
+.pagination > label > .circle-button:active {
+  border: 3px solid #fff;
+  background-color: #000;
+}
+
+/* / SLIDER */
+
+/* ARROW_CONTAINER */
+
+.sd {
+  margin-right: 5px;
+}
+
+.sn {
+  margin-left: 5px;
+}
+
+.sd,
+.sn {
+  display: none;
+  font-size: 25px;
+  line-height: 20px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.sd:hover,
+.sn:hover {
+  transform: rotate(360deg);
+}
+
+#slide1:checked ~ .subslide-wrapper .sn2 {
+  display: block;
+}
+
+#slide2:checked ~ .subslide-wrapper .sn3 {
+  display: block;
+}
+
+#slide3:checked ~ .subslide-wrapper .sn4 {
+  display: block;
+}
+
+#slide4:checked ~ .subslide-wrapper .sn1 {
+  display: block;
+}
+
+#slide1:checked ~ .subslide-wrapper .sd4 {
+  display: block;
+}
+
+#slide2:checked ~ .subslide-wrapper .sd1 {
+  display: block;
+}
+
+#slide3:checked ~ .subslide-wrapper .sd2 {
+  display: block;
+}
+
+#slide4:checked ~ .subslide-wrapper .sd3 {
+  display: block;
+}
+
+/* / ARROW_CONTAINER */
+
+/* MEDIA QUERIES */
+
+@media (max-width: 420px) {
+  .subslide-wrapper {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    transition: all 1s ease;
+  }
+  .pagination {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+/* / MEDIA QUERIES */
