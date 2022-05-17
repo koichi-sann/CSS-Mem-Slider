@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS-MEM-SLIDER</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="slider-main">
+      <input checked type="radio" name="slide" id="slide1" class="input" />
+      <input type="radio" name="slide" id="slide2" class="input" />
+      <input type="radio" name="slide" id="slide3" class="input" />
+      <input type="radio" name="slide" id="slide4" class="input" />
+      <div class="slide-wrapper">
+        <div class="slide">
+          <img src="./assets/first-meme.jpg" alt="meme-first" class="slide-img" />
+        </div>
+        <div class="slide">
+          <img src="./assets/second-meme.jpg" alt="meme-second" class="slide-img" />
+        </div>
+        <div class="slide">
+          <img src="./assets/third-meme.jpg" alt="meme-third" class="slide-img" />
+        </div>
+        <div class="slide">
+          <img src="./assets/fourth-meme.jpg" alt="meme-fourth" class="slide-img" />
+        </div>
+      </div>
+      <div class="subslide-wrapper">
+        <div class="text-wrapper">
+          <div class="text-cont">
+            <span class="meme-text">Gods! I'm comming to ya!</span>
+            <span class="meme-text">Euthanasia</span>
+            <span class="meme-text">The reason why beliefs are born.</span>
+            <span class="meme-text">Dementia: happy mind or unbearable pain?</span>
+          </div>
+        </div>
+        <div class="pagination">
+          <div class="pagination-arrow-container">
+            <label for="slide1" class="sd sd1">&#8592;</label>
+            <label for="slide2" class="sd sd2">&#8592;</label>
+            <label for="slide3" class="sd sd3">&#8592;</label>
+            <label for="slide4" class="sd sd4">&#8592;</label>
+          </div>
+          <label for="slide1" class="slide-button sb1">
+            <span class="circle-button" id="slide-button-1"></span>
+          </label>
+          <label for="slide2" class="slide-button sb2">
+            <span class="circle-button" id="slide-button-2"></span>
+          </label>
+          <label for="slide3" class="slide-button sb3">
+            <span class="circle-button" id="slide-button-3"></span>
+          </label>
+          <label for="slide4" class="slide-button sb4">
+            <span class="circle-button" id="slide-button-4"></span>
+          </label>
+          <div class="pagination-arrow-container">
+            <label for="slide1" class="sn sn1">&#8594;</label>
+            <label for="slide2" class="sn sn2">&#8594;</label>
+            <label for="slide3" class="sn sn3">&#8594;</label>
+            <label for="slide4" class="sn sn4">&#8594;</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
